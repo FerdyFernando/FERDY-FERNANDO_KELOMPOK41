@@ -20,6 +20,7 @@ class lantaiboss {
         System.out.println("Masukkan pilihan : ");
         
     }
+        //Method tanpa nilai kembali (void)
 }
 
 MAIN
@@ -44,6 +45,7 @@ static int pertarunganboss (int damage, int damageboss){
     System.out.println("Damage terakhir : ");
 
     return damage;
+    //fungsi dengan nilai kembali 
 }
     public static void main(String[] args) {
         Scanner inputan = new Scanner(System.in);
