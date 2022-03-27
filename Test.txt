@@ -40,7 +40,7 @@ static int pertarunganboss (int damage, int damageboss){
     else if (damage==damageboss) {System.out.println("MATI SEMUA");}
     
     else {System.out.println("MATI COKK");
-        System.out.println("Kembali lagi setelah 100 tahun awokaowkoa");}
+        System.out.println("Kembali lagi setelah 100 tahun awokaowka");}
     System.out.println("Damage terakhir : ");
 
     return damage;
