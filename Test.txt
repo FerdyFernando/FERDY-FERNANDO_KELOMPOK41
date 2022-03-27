@@ -48,10 +48,10 @@ static int pertarunganboss (int damage, int damageboss){
     //fungsi dengan nilai kembali 
 }
     public static void main(String[] args) {
-        Scanner inputan = new Scanner(System.in);
+        Scanner inputan = new Scanner(System.in); 
         boolean benar = true;
         String username,password;
-        username = "tabibito";
+        username = "tabibito"; //Input yang harus dimasukkan user agar program lanjut ke perintah berikutnya
         password = "ayakawaifuku";
         int damage=5;
         int lantai = 1;
@@ -61,7 +61,7 @@ static int pertarunganboss (int damage, int damageboss){
         System.out.println("SELAMAT DATANG DI");
         System.out.println("Gensin Impek lite (kw)");
         do{
-        System.out.println("SILAHKAN MASUKKAN USERNAME");
+        System.out.println("SILAHKAN MASUKKAN USERNAME"); //User memasukkan input yang tepat supaya program dapat lanjut
         
         String namauser = inputan.nextLine();
         String equals1 = namauser.toLowerCase();
@@ -73,15 +73,15 @@ static int pertarunganboss (int damage, int damageboss){
             System.out.println(" ");
             System.out.println("ANDA BERHASIL LOGIN");
             System.out.println("--------------------");
-            benar=true;}
+            benar=true;} //Ketika user memasukkan input yang benar, program akan lanjut ke perintah berikutnya
 
         else {System.out.println("LOGIN GAGAL");
-            benar=false;}
+            benar=false;} //Ketika user memasukkan input yang salah, program akan mengulang perintah sebelumnya
        
         }
     while (benar==false);
     
-        System.out.println("SELAMAT DATANG DI GIM GENSIN IMPEK ");
+        System.out.println("SELAMAT DATANG DI GIM GENSIN IMPEK "); //Output yang muncul ketika user memasukkan input yang benar
         do{
         System.out.println("MENU UTAMA");
         System.out.println("MULAI MAIN?");
