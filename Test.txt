@@ -1,2 +1,157 @@
-ubah lolgit ngapo ad isi
-heui hei heiii
+METHOD
+-----------------
+class lantaiboss {
+     public void rule(){
+        System.out.println("RULES : ");
+        System.out.println("Saat anda mulai bermain, anda harus mengalahkan para slime-slime dahulu di lantai anda saat ini.");
+        System.out.println("Perhatikan damage anda. Anda hanya bisa mengalahkan musuh yang damagenya lebih kecil dari anda ");
+        System.out.println("Saat anda mengalahkan musuh, maka damage anda akan +1 sesuai dengan jumlah musuh yang anda kalahkan");
+        System.out.println("Saat anda gagal untuk mengalahkan musuh maka anda akan keluar dari game, dan mengulang dari awal.");
+        
+    }
+    public void lantai1(){
+        System.out.println("ANDA DI LT. 1");
+        System.out.println("MAU LAWAN : ");
+        System.out.println("1. Slime 4x(disarankan)");
+        
+        System.out.println("2. BOSS (Dvalin)");
+        
+        System.out.println("-----------------------");
+        System.out.println("Masukkan pilihan : ");
+        
+    }
+}
+
+MAIN
+---------------
+public class TUGAS_MODUL4 {
+static int pertarungan (int damage, int damagemusuh){
+
+    if (damage>damagemusuh){System.out.println("ANDA MENANG");
+    damage=damage+damagemusuh;}
+    else if (damage<damagemusuh) {System.out.println("ANDA KALAH");}
+    System.out.print("Damage anda sekarang : ");
+    return damage;
+}
+static int pertarunganboss (int damage, int damageboss){
+    if (damage>damageboss){System.out.println("ANDA MENANG");
+    damage = damage+damageboss;
+    }
+    else if (damage==damageboss) {System.out.println("MATI SEMUA");}
+    
+    else {System.out.println("MATI COKK");
+        System.out.println("Kembali lagi setelah 100 tahun awokaowkoa");}
+    System.out.println("Damage terakhir : ");
+
+    return damage;
+}
+    public static void main(String[] args) {
+        Scanner inputan = new Scanner(System.in);
+        boolean benar = true;
+        String username,password;
+        username = "tabibito";
+        password = "ayakawaifuku";
+        int damage=5;
+        int lantai = 1;
+        int damagemusuh1 = 4;
+        int damageboss1 = 9;
+    
+        System.out.println("SELAMAT DATANG DI");
+        System.out.println("Gensin Impek lite (kw)");
+        do{
+        System.out.println("SILAHKAN MASUKKAN USERNAME");
+        
+        String namauser = inputan.nextLine();
+        String equals1 = namauser.toLowerCase();
+        System.out.println("MASUKKAN PASSWORD : ");
+        String passuser = inputan.nextLine();
+        String equals2 = passuser.toLowerCase();
+        
+        if (equals1.equals(username)&&equals2.equals(password)){
+            System.out.println(" ");
+            System.out.println("ANDA BERHASIL LOGIN");
+            System.out.println("--------------------");
+            benar=true;}
+
+        else {System.out.println("LOGIN GAGAL");
+            benar=false;}
+       
+        }
+    while (benar==false);
+    
+        System.out.println("SELAMAT DATANG DI GIM GENSIN IMPEK ");
+        do{
+        System.out.println("MENU UTAMA");
+        System.out.println("MULAI MAIN?");
+        System.out.println("1. YA");
+        System.out.println("2. TIDAK");
+        System.out.println("MASUKKAN PILIHAN : ");
+        int pilihan1 = inputan.nextInt();
+        switch (pilihan1){
+            case (1) : System.out.println(" ");
+                        System.out.println("STATUS ANDA SAAT INI ");
+                        System.out.println("User : "+username);
+                        
+                        System.out.println("Damage : "+damage);
+                        System.out.println("Posisi : lantai "+lantai);
+                        System.out.println("Masuk ke arena?");
+                        System.out.println("1. Ya");
+                        System.out.println("2. Tidak");
+                        System.out.println("Masukkan pilihan :");
+                        int pilihan2 = inputan.nextInt();
+                        System.out.println(" ");
+                        if (pilihan2 == 1){System.out.println("MULAI MAINNN!!!");
+                        benar=true;
+                        break;} 
+                        else {System.out.println("Kembali ke menu utama");
+                                benar=false;
+                        }
+            case (2):System.out.println("APAKAH ANDA INGIN KELUAR?");
+                    System.out.println("1. YA");
+                    System.out.println("2. TIDAK");
+                    System.out.println("MASUKKAN PILIHAN : ");
+                    int keluar = inputan.nextInt();
+                    if (keluar==1){System.out.println("TERIMAKASIH TELAH MEMAINKAN GENSIN IMPEK");
+                        System.out.println("ANDA TELAH KELUAR");
+                    benar = true;}
+                    else if (keluar==2){System.out.println("ANDA TIDAK JADI KELUAR");}
+                    else {System.out.println("NOMOR SING MBOK LEBOKNE SALAHH");}
+                    break;
+        }
+        
+    }
+        while (benar==false);
+lantaiboss main = new lantaiboss();
+        System.out.println(" ");
+main.rule();
+do{
+    System.out.println(" ");
+main.lantai1();
+
+int pilihan3= inputan.nextInt();
+        switch (pilihan3){
+            case (1):System.out.println("Anda akan melawan 4 slime");
+                    System.out.println("Damage slime = 1");
+                    System.out.println("FIGHT !!!");
+                    System.out.println(pertarungan(damage,damagemusuh1));
+                    damage = damage+damagemusuh1;
+                    System.out.println(" ");
+                    System.out.println(" ");
+                    benar=false;
+                  
+                    break;
+            case (2):System.out.println(" ");
+                    System.out.println("Anda akan melawan boss");
+                    System.out.println("Damage boss = 9");
+                    System.out.println("FIGHT!!!");
+                    System.out.println(pertarunganboss(damage,damageboss1));
+                    int damageakhir= damage+damageboss1;
+                    benar=true;
+                    break;
+
+        }
+
+}
+while (benar==false);
+}
+}
